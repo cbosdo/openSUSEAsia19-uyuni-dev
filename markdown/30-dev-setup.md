@@ -65,12 +65,12 @@ ant make-eclipse-project
 	* Import `conf/eclipse/checkstyle_eclipse.xml`
 
 
-<!-- .slide: data-state="normal" id="eclipse-setup-link" data-menu-title="Eclipse Setup Links" data-timing="5" -->
+<!-- .slide: data-state="normal" id="dev-wiki-link" data-menu-title="Development Wiki Link" data-timing="15" -->
 
-<div class="qrcode" id="qrcode-eclipse-instructions" />
-<a href="https://github.com/uyuni-project/uyuni/wiki/Eclipse-specific-development-instructions"
-   id="eclipse-instructions">
-  https://github.com/uyuni-project/uyuni/wiki/Eclipse-specific-development-instructions
+<div class="qrcode" id="qrcode-wiki" />
+<a href="https://github.com/uyuni-project/uyuni/wiki"
+   id="wiki">
+  https://github.com/uyuni-project/uyuni/wiki
 </a>
 
 Note:
@@ -93,10 +93,12 @@ Fetch dependencies:
 ant -f manager-build.xml ivy
 ```
 
-<div class="qrcode" id="qrcode-java-instructions"
-    style="height: 40%" />
-<a href="https://github.com/uyuni-project/uyuni/wiki/Java-Development-Environment"
-   id="java-instructions">
+One of:
+
+* `precompile = true` in `buildconf/manager-developer-build.properties`
+* `ant -f manager-build.xml webapp`
+
+<a href="https://github.com/uyuni-project/uyuni/wiki/Java-Development-Environment">
   https://github.com/uyuni-project/uyuni/wiki/Java-Development-Environment
 </a>
 
@@ -171,7 +173,7 @@ Note:
 module "srv" {
   source = "./modules/libvirt/suse_manager"
   base_configuration = "${module.base.configuration}"
-  product_version = "head"
+  product_version = "uyuni-master"
   name = "srv"
   image = "opensuse151"
   auto_accept = false
@@ -196,7 +198,7 @@ module "minion" {
   source = "./modules/libvirt/minion"
   base_configuration = "${module.base.configuration}"
   server_configuration = "${module.srv.configuration}"
-  product_version = "head"
+  product_version = "uyuni-master"
   name = "minion"
   image = "opensuse151"
   auto_connect_to_master = true
@@ -275,10 +277,8 @@ cd uyuni/rel-eng
 * <!-- .element id="wait-obs" class="fragment" -->
   Wait for green build
 
-```diff
--  product_version = "head"
-+  product_version = "test"
-+  product_test_repository="https://download.opensuse.org/repositories/home:/you:/branches:/systemsmanagement:/Uyuni:/Master/openSUSE_Leap_15.1/"
+```c
+product_test_repository="https://download.opensuse.org/repositories/home:/you:/branches:/systemsmanagement:/Uyuni:/Master/openSUSE_Leap_15.1/"
 ```
 <!-- .element id="main-tf-tweak" class="fragment" -->
 
