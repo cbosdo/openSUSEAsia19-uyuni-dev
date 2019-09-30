@@ -1,0 +1,57 @@
+// Section break page template
+
+@mixin section-break($bg, $text: $bright-green) {
+    .slides {
+        $left-margin: 2%;
+        $top-margin: 3%;
+        $bg-height: 100% - (2 * $top-margin);
+        $width: 100% - (2 * $left-margin);
+
+        @include background($bg);
+
+        > section {
+            padding: 0;
+            height: 30%;
+            position: absolute;
+            top: 40%;
+            text-align: left;
+
+            h1, h2 {
+                color: $text;
+            }
+
+            h1 {
+                font-size: 46pt;
+            }
+
+            h2 {
+                font-size: 32pt;
+                font-weight: normal;
+            }
+
+            code {
+                color: $light-yellow !important;
+            }
+        }
+    }
+}
+
+.section-break .reveal {
+    @include section-break(dark-green);
+    @include slide-numbers($SUSE-green, white);
+}
+
+.section-break-2 .reveal {
+    @include section-break(light-green);
+    @include slide-numbers(white, $SUSE-green);
+}
+
+.section-break-3 .reveal {
+    @include section-break(green);
+    @include slide-numbers($SUSE-green, white);
+}
+
+.section-break-4 .reveal {
+    @include section-break(yellow-green, $bright-blue);
+    @include slide-numbers($SUSE-green, white);
+}

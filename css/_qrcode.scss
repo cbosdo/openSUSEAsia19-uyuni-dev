@@ -1,0 +1,33 @@
+.qrcode {
+    .reveal {
+        @include no-slide-numbers;
+    }
+
+    img {
+        height: 80% !important;
+        width: auto !important;
+        background-color: white !important;
+        padding: 1em;
+    }
+}
+
+.qrcode, .normal {
+    .reveal section {
+        .qrcode {
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.normal {
+    .reveal section {
+        .qrcode {
+            img {
+                padding: 0;
+            }
+        }
+    }
+}

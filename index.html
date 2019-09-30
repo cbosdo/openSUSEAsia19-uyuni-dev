@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- reveal.js CSS theme and local overrides -->
+    <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
+    <link rel="stylesheet" href="css/reveal-override.css"/>
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-markdown="markdown/00-meta.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/10-intro.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/20-uyuni.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/30-dev-setup.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/40-code-overview.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/50-find-your-way.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+            <section data-markdown="markdown/90-postscript.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:">
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script src="qrcodejs/qrcode.js"></script>
+    <script src="js/qrcode.js"></script>
+</body>
+</html>

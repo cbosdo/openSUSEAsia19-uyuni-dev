@@ -1,0 +1,49 @@
+@mixin background($bg: green) {
+    background:
+        url(../images/SUSE/bg-#{$bg}.png)
+            50% #{50%}         //  x/y positions
+          / 100% 100%          //  x/y sizes
+            no-repeat;
+}
+
+@mixin slide-numbers($fg: white, $bg: $SUSE-green) {
+    .slide-number-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 2%;
+        bottom: 2%;
+
+        > a {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            .slide-number {
+                position: absolute;
+
+                // Unfortunately reveal.js sets dom.slideNumber.style.display
+                // in the code so we need !important to override it.  This
+                // overrides the slideNumber config option, but slide numbers
+                // are part of this theme anyway.
+                display: inline-block !important;
+
+                right: 3%;
+                bottom: 3%;
+                font-size: 5pt;
+                border-radius: 50%;
+                background-color: $bg;
+                color: $fg;
+                span {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
+
+@mixin no-slide-numbers {
+    .slide-number {
+        display: none !important;
+    }
+}

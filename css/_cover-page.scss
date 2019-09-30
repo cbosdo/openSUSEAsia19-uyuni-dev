@@ -1,0 +1,113 @@
+// Styling for cover page of presentation
+
+.cover .reveal {
+    .slides {
+        $bg-height: 100%;
+        $left-margin: 0%;
+        $top-margin: $left-margin * 4 / 3;
+        $width: 100% - (2 * $left-margin);
+        $y-offset: 0;
+        margin: 0;
+
+        background:
+            url(../images/SUSE/SUSE-logo-white.png)
+               10% 11%              //  x/y positions
+             / 11% 11%              //  x/y sizes
+                no-repeat,
+            url(../images/SUSE/bg-green.png)
+                50% #{$y-offset}    //  x/y positions
+              / $width $bg-height   //  x/y sizes
+                no-repeat;
+
+        position: relative;
+
+        .title {
+            position: absolute;
+            top: 43%;
+            h1, h2, h3, h4, h5, h6 {
+                color: white;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            a {
+                color: $dark-purple !important;
+            }
+        }
+
+        .presenters {
+            position: absolute;
+            top: 78%;
+            width: 100%;
+
+            .presenter {
+                width: 50%;
+                position: absolute;
+            }
+
+            .presenter-2 {
+                left: 50%;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                color: white;
+                a {
+                    color: white !important;
+                }
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .name {
+                font-weight: bold;
+            }
+        }
+
+        text-align: inherit;
+
+        h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+
+        .qr-embedded {
+            position: absolute;
+            top: -2%;
+            right: -7%;
+            width: 50%;
+            height: 60%;
+
+            .qrcode {
+                position: relative;
+                left: 30%;
+            }
+
+            h2 {
+                font-size: 90%;
+                text-align: right;
+                margin-top: 0%;
+                margin-right: 6%;
+                a {
+                    color: white !important;
+                }
+            }
+        }
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 0em;
+    }
+
+    @include no-slide-numbers;
+}

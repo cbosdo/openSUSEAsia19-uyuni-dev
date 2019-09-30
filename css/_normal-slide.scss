@@ -1,0 +1,43 @@
+// Styling for normal slides
+
+.normal .reveal {
+    $slide-width: 100% - 2 * $section-left-margin;
+
+    .slides {
+        background:
+            url(../images/SUSE/vertical-green-strip.png)
+                0% 0%       // x/y positions
+              / 4.5% 100%   // x/y sizes
+                no-repeat;
+
+        text-align: inherit;
+
+        > section {
+            width: $slide-width;
+        }
+
+        h1 {
+            margin-bottom: 0.8em;
+        }
+
+        h2 {
+            margin-bottom: 0.8em;
+        }
+
+        p {
+            margin-bottom: 0.4em;
+        }
+
+        li > p {
+            margin-bottom: 0;
+        }
+
+        img.full-slide {
+            width: 80%;
+            max-width: 80%;
+            max-height: 80%;
+        }
+    }
+
+    @include slide-numbers;
+}

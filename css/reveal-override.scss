@@ -1,0 +1,93 @@
+@import '_fonts';
+
+@import '_variables';
+@import '_mixins';
+@import '_suse-colors';
+@import '_unofficial-colors';
+
+.reveal {
+    h1, h2, h3, h4, h5, h6, div, span {
+        font-family: "Arial", sans-serif;
+    }
+
+    font-size: 2rem;
+
+    @import '_slides';
+
+    .overlay-help .viewport {
+        th, td {
+            color: $medium-green;
+        }
+    }
+
+    /* Blow iframe up to full screen size */
+    iframe {
+        height: 90%;
+        width: 100%;
+        margin: 2%;
+    }
+
+    .controls {
+        div.navigate-up, div.navigate-up.enabled {
+            border-bottom-color: black
+        }
+
+        div.navigate-down, div.navigate-down.enabled {
+            border-top-color: black
+        }
+
+        div.navigate-left, div.navigate-left.enabled {
+            border-right-color: black
+        }
+
+        div.navigate-right, div.navigate-right.enabled {
+            border-left-color: black
+        }
+    }
+
+    .stamp {
+        position: absolute;
+        color: red !important;
+        font-size: 6em !important;
+        font-family: "Special Elite" !important;
+        transform: rotate(-45deg);
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-20vw;
+        margin-top:-10vh;
+        text-shadow: none;
+    }
+
+    .slide-menu {
+        .slide-menu-item {
+            padding-top: 5px;
+            padding-bottom: 0px;
+            margin-bottom: 2px;
+        }
+
+        .slide-menu-item-vertical {
+            padding-top: 4px;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+@media print {
+    .reveal {
+        h1, h2, h3, h4, h5, h6 {
+            color: black;
+        }
+    }
+}
+
+// Styles specific to individual master page templates go in separate files:
+@import '_qrcode';
+@import '_cover-page';
+@import '_normal-slide';
+@import '_color-palette';
+@import '_section-break';
+@import '_green-bg';
+@import '_blank-slide';
+@import '_suse-syntax-highlighting';
+@import '_per-page';

@@ -1,0 +1,84 @@
+$SUSE-green:          rgb(  2, 211,  95);
+
+$dark-neutral:        rgb(  0,   0,   0);
+$medium-dark-neutral: rgb( 95,  95,  95);
+$medium-neutral:      rgb(167, 169, 172);
+$light-neutral:       rgb(220, 221, 222);
+$tint-neutral:        rgb(237, 237, 237);
+
+$bright-blue:         rgb(  0, 178, 226);
+$dark-blue:           rgb( 13,  44,  64);
+$bright-royal:        rgb(  0,   7, 176);
+$light-blue:          rgb(112, 214, 224);
+
+$bright-green:        rgb(160, 255,  95);
+$medium-green:        rgb(  0, 192,  29);
+
+$dark-orange:         rgb(237, 105,  36);
+$medium-orange:       rgb(253, 154,  43);
+$light-yellow:        rgb(255, 239, 141);
+
+$bright-teal:         rgb(  2, 164, 156);
+
+$bright-magenta:      rgb(222,   0, 128);
+$light-magenta:       rgb(247, 163, 213);
+$dark-purple:         rgb( 20,  25, 105);
+$bright-purple:       rgb(132,  23, 129);
+
+////////////////////////////////////////////////////////////////////
+
+.bg-SUSE-green           { background-color: $SUSE-green !important;          }
+
+.bg-dark-neutral         { background-color: $dark-neutral !important;        }
+.bg-medium-dark-neutral  { background-color: $medium-dark-neutral !important; }
+.bg-medium-neutral       { background-color: $medium-neutral !important;      }
+.bg-light-neutral        { background-color: $light-neutral !important;       }
+.bg-tint-neutral         { background-color: $tint-neutral !important;        }
+
+.bg-bright-blue          { background-color: $bright-blue !important;         }
+.bg-dark-blue            { background-color: $dark-blue !important;           }
+.bg-bright-royal         { background-color: $bright-royal !important;        }
+.bg-light-blue           { background-color: $light-blue !important;          }
+
+.bg-bright-green         { background-color: $bright-green !important;        }
+.bg-medium-green         { background-color: $medium-green !important;        }
+
+.bg-dark-orange          { background-color: $dark-orange !important;         }
+.bg-medium-orange        { background-color: $medium-orange !important;       }
+.bg-light-yellow         { background-color: $light-yellow !important;        }
+
+.bg-bright-teal          { background-color: $bright-teal !important;         }
+
+.bg-bright-magenta       { background-color: $bright-magenta !important;      }
+.bg-light-magenta        { background-color: $light-magenta !important;       }
+.bg-bright-purple        { background-color: $bright-purple !important;       }
+.bg-dark-purple          { background-color: $dark-purple !important;         }
+
+////////////////////////////////////////////////////////////////////
+
+.fg-SUSE-green           { color: $SUSE-green !important;          }
+
+.fg-dark-neutral         { color: $dark-neutral !important;        }
+.fg-medium-dark-neutral  { color: $medium-dark-neutral !important; }
+.fg-medium-neutral       { color: $medium-neutral !important;      }
+.fg-light-neutral        { color: $light-neutral !important;       }
+.fg-tint-neutral         { color: $tint-neutral !important;        }
+
+.fg-bright-blue          { color: $bright-blue !important;         }
+.fg-dark-blue            { color: $dark-blue !important;           }
+.fg-bright-royal         { color: $bright-royal !important;        }
+.fg-light-blue           { color: $light-blue !important;          }
+
+.fg-bright-green         { color: $bright-green !important;        }
+.fg-medium-green         { color: $medium-green !important;        }
+
+.fg-dark-orange          { color: $dark-orange !important;         }
+.fg-medium-orange        { color: $medium-orange !important;       }
+.fg-light-yellow         { color: $light-yellow !important;        }
+
+.fg-bright-teal          { color: $bright-teal !important;         }
+
+.fg-bright-magenta       { color: $bright-magenta !important;      }
+.fg-light-magenta        { color: $light-magenta !important;       }
+.fg-bright-purple        { color: $bright-purple !important;       }
+.fg-dark-purple          { color: $dark-purple !important;         }
