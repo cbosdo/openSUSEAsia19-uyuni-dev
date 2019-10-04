@@ -34,3 +34,8 @@
     </figure>
   </div>
 </div>
+
+Note:
+* Spacewalk start: 2008
+* SUSE Manager: 2011
+* Uyuni: 2018
