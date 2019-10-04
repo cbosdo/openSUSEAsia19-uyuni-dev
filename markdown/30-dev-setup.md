@@ -138,6 +138,7 @@ terraform apply --auto-approve
 
 Note:
 * Explain what terraform is?
+* temporary branch to use: testsuite-stable-with-new-fake-repos
 
 
 <!-- .slide: data-state="normal" id="main-rf-example" data-menu-title="main.tf example" data-timing="60" -->
@@ -176,6 +177,7 @@ module "srv" {
   product_version = "uyuni-master"
   name = "srv"
   image = "opensuse151"
+  use_os_released_updates = true
   auto_accept = false
   skip_changelog_import = false
   browser_side_less = false
