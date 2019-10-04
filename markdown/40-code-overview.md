@@ -12,7 +12,13 @@ Note:
 <!-- .slide: data-state="normal" id="main-blocks" data-menu-title="Main Blocks" data-timing="120" -->
 ## Main Blocks
 
-<img data-src="images/main-blocks.svg" class="hcenter"/>
+<div data-svg-fragment="images/main-blocks.svg#[*|label=base]" class="hcenter"
+  style="height: 90%">
+  <a class="fragment" title="[*|label=jsp]"/></a>
+  <a class="fragment" title="[*|label=backend]"/></a>
+  <a class="fragment" title="[*|label=spark]"/></a>
+  <a class="fragment" title="[*|label=salt]"/></a>
+</div>
 
 
 <!-- .slide: data-state="normal" id="by-folder" data-menu-title="Main Folders" data-timing="120" -->
