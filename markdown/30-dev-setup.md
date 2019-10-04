@@ -40,7 +40,7 @@ Plugins:
 </div>
 
 Note:
-*Disclaimer: I am an Eclipse user! other possible IDEs* 
+*Disclaimer: I am an Eclipse user! other possible IDEs*
 Using Neovim for non-Java code
 
 
@@ -113,7 +113,7 @@ Note:
 
 * <!-- .element: id="add-terraform-repo" class="fragment" -->
   Add OBS `systemsmanagement:terraform` repository
- 
+
 ```bash
 zypper in terraform-provider-libvirt
 ```
@@ -168,7 +168,7 @@ Note:
 
 <!-- .slide: data-state="normal" id="main-rf-example-srv" data-menu-title="main.tf example - Server" data-timing="30" -->
 ## main.tf - Server
- 
+
 ```c
 module "srv" {
   source = "./modules/libvirt/suse_manager"
