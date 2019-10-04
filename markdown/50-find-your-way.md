@@ -21,5 +21,18 @@ Note:
 <!-- .slide: data-state="normal" id="contact" data-menu-title="Contact" data-timing="30" -->
 ## Contact
 
-* Mailing list: [uyuni-devel@opensuse.org](https://lists.opensuse.org/uyuni-devel)
-* IRC: #uyuni on Freenode.net
+<div class="container">
+  <div class="item">
+    <figure class="fragment">
+      <img alt="Mail icon" src="images/envelope.svg"/>
+      <figcaption>[uyuni-devel@opensuse.org](https://lists.opensuse.org/uyuni-devel)</figcaption>
+    </figure>
+  </div>
+
+  <div class="item">
+    <figure class="fragment">
+      <img alt="Chat icon" src="images/chat-icon.svg"/>
+      <figcaption>#uyuni on Freenode.net</div>
+    </figure>
+  </div>
+</div>

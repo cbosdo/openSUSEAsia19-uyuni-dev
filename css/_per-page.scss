@@ -6,7 +6,7 @@
         margin-right: auto;
     }
 
-    #history, #eclipse-setup {
+    #history, #eclipse-setup, #contact {
         .container {
             display: flex;
             flex-flow: row wrap;
@@ -36,6 +36,19 @@
 
                 figcaption {
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    #contact {
+        .item {
+            figure {
+                figcaption {
+                    position: relative;
+                    top: 40px;
+                    font-weight: bolder;
+                    font-size: 3rem;
                 }
             }
         }
