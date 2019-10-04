@@ -8,3 +8,6 @@
 [submodule "reveal.js-menu"]
 	path = reveal.js-menu
 	url = https://github.com/denehyg/reveal.js-menu
+[submodule "reveal.js-fragment"]
+	path = reveal.js-fragment
+	url = https://github.com/csachs/reveal-svg-fragment

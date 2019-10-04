@@ -37,7 +37,8 @@ Reveal.initialize({
         { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'reveal.js-menu/menu.js', async: true, condition: function() { return !!document.body.classList; } }
+        { src: 'reveal.js-menu/menu.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'reveal.js-fragment/reveal-svg-fragment.js' }
     ]
 });
 
