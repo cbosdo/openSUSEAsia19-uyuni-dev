@@ -214,33 +214,46 @@ Note:
 
 
 <!-- .slide: data-state="normal" id="running-unit-tests" data-menu-title="Running Unit Tests" data-timing="120" -->
-## Running Unit Tests 
+## Running Unit Tests
 
+<div class="fragment">
+<p>
 Building the test containers
+</b>
 
-```bash
+<pre><code class="hljs bash" data-trim data-noescape>
 sudo systemctl start docker
 cd uyuni/susemanager-utils/testing/docker/master
 make public_containers
-```
+</code></pre>
+</div>
 
+<div class="fragment">
+<p>
 Running the unit tests
+</p>
 
-```bash
+<pre><code class="hljs bash" data-trim data-noescape>
 cd uyuni/java
 make -f Makefile.docker dockerrun_pg
 mkdir -p /var/log/rhn/
 mkdir -p /srv/susemanager
-```
+</code></pre>
+</div>
 
+<div class="fragment">
+<p>
 Junit3 Run Configuration
+</p>
 
-```bash
+<pre><code class="hljs bash" data-trim data-noescape>
 -Drhn.config.dir=${workspace_loc:spacewalk-java}/buildconf/test/
 -Dlog4j.threshold=debug
-```
+</code></pre>
+</div>
 
 `ant -f manager-build.xml test`
+<!-- .element class="fragment" -->
 
 Note:
 * In Eclipse: run tests separately
@@ -249,20 +262,25 @@ Note:
 <!-- .slide: data-state="normal" id="cucumber-tests" data-menu-title="Cucumber Tests" data-timing="120" -->
 ## Cucumber Tests
 
-* UI / integration tests
-* Ruby + [cucumber](https://cucumber.io/docs)
-* Special Sumaform setup
+* <!-- .element class="fragment" -->
+  UI / integration tests
+* <!-- .element class="fragment" -->
+  Ruby + [cucumber](https://cucumber.io/docs)
+* <!-- .element class="fragment" -->
+  Special Sumaform setup
     * `terraform workspace --help`
     * `ln -s main.tf main.tf.test`
     * Controller
     * Test client + minion
-* Edit `spacewalk/testsuite/run_sets/testsuite.yml`
-* `ssh test-ctl.tf.local -c run-testsuite`
-* `cucumber spacewalk/testsuite/features/my_feature.feature`
+* <!-- .element class="fragment" -->
+  On the controller VM:
+    * Edit `spacewalk/testsuite/run_sets/testsuite.yml`
+    * `run-testsuite`
+    * `cucumber spacewalk/testsuite/features/my_feature.feature`
 
 
 <!-- .slide: data-state="normal" id="test-packages" data-menu-title="Test Packages with OBS" data-timing="120" -->
-## Test Packages using OBS 
+## Test Packages using OBS
 
 * <!-- .element id="branch-obs-master" class="fragment" -->
   Branch a package in `systemsmanagement:Uyuni:Master`
