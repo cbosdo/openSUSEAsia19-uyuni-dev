@@ -20,18 +20,18 @@ Eclipse Download page:
   <img alt="Eclipse download page screenshot" data-src="images/eclipse-download.png" class="hcenter"/>
 </a>
 
-Plugins:
+Plugins: <!-- .element class="fragment" -->
 
 <div class="container">
   <div class="item">
-    <figure>
+    <figure class="fragment">
       <a href="http://ant.apache.org/ivy/ivyde/download.cgi">
         <img data-src="images/ivy-logo.png" alt="Ivy Logo" />
       </a>
     </figure>
   </div>
   <div class="item">
-    <figure>
+    <figure class="fragment">
       <a href="https://checkstyle.org/eclipse-cs/#!/install">
         <img data-src="images/checkstyle-logo.png" alt=" Logo" />
       </a>
@@ -40,29 +40,39 @@ Plugins:
 </div>
 
 Note:
-*Disclaimer: I am an Eclipse user! other possible IDEs*
-Using Neovim for non-Java code
+* *Disclaimer: I am an Eclipse user! other possible IDEs*
+* Using Neovim for non-Java code
+* Explain the plugins
 
 
-<!-- .slide: data-state="normal" id="getting-sources" data-menu-title="Getting the Sources" data-timing="120" -->
+<!-- .slide: data-state="normal" id="getting-sources" data-menu-title="Getting the Sources" data-timing="60" -->
 ## Getting the Sources
-
-### Importing the sources
 
 ```bash
 git clone https://github.com/uyuni-project/uyuni/
+```
+
+```bash
 cd uyuni/java
 ant make-eclipse-project
 ```
 
 *File* > *Import* > *General* > *Existing Projects into Workspace*
 
-### Checkstyle setup
+<img data-src="images/import-projects.png" alt="Import projects dialog"
+ class="hcenter" style="width: 30%"/>
+
+
+<!-- .slide: data-state="normal" id="checkstyle-setup" data-menu-title="Checkstyle Setup" data-timing="60" -->
+## Checkstyle Setup
 
 * In *Window* > *Preferences* > *Checkstyle* > *New*
 	* Internal Configuration
 	* Name: *Uyuni*
 	* Import `conf/eclipse/checkstyle_eclipse.xml`
+
+<img data-src="images/checkstyle-config.png" alt="Checkstyle setup dialog"
+ class="hcenter" style="width: 40%"/>
 
 
 <!-- .slide: data-state="normal" id="dev-wiki-link" data-menu-title="Development Wiki Link" data-timing="15" -->
@@ -80,27 +90,34 @@ Ask if they want to get the link now.
 <!-- .slide: data-state="normal" id="building" data-menu-title="Building" data-timing="120" -->
 ## Building
 
-Add `systemsmanagement:Uyuni:Utils` repository
+```bash
+zypper ar http://download.opensuse.org/... systemsmanagement:Uyuni:Utils
+```
+<!-- .element class="fragment" -->
 
 ```bash
 zypper in java-11-openjdk-devel apache-ivy ant ant-junit servletapi5 \
     obs-to-maven
 ```
-
-Fetch dependencies:
+<!-- .element class="fragment" -->
 
 ```bash
 ant -f manager-build.xml ivy
 ```
+<!-- .element class="fragment" -->
 
 One of:
+<!-- .element class="fragment" -->
 
-* `precompile = true` in `buildconf/manager-developer-build.properties`
-* `ant -f manager-build.xml webapp`
+* <!-- .element class="fragment" -->
+  `precompile = true` in `buildconf/manager-developer-build.properties`
+* <!-- .element class="fragment" -->
+  `ant -f manager-build.xml webapp`
 
 <a href="https://github.com/uyuni-project/uyuni/wiki/Java-Development-Environment">
   https://github.com/uyuni-project/uyuni/wiki/Java-Development-Environment
 </a>
+<!-- .element class="fragment" -->
 
 Note:
 * Explain obs-to-maven
@@ -111,8 +128,10 @@ Note:
 <!-- .slide: data-state="normal" id="sumaform" data-menu-title="Sumaform" data-timing="120" -->
 ## Sumaform
 
-* <!-- .element: id="add-terraform-repo" class="fragment" -->
-  Add OBS `systemsmanagement:terraform` repository
+ ```bash
+zypper ar http:// systemsmanagement:terraform
+ ```
+<!-- .element: id="add-terraform-repo" class="fragment" -->
 
 ```bash
 zypper in terraform-provider-libvirt
